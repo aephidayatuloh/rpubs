@@ -1,7 +1,15 @@
 # This is function to extract code from RPubs
 #
 #' @title Extract Code From RPubs Article
-#' @description Extract code from an RPubs article
+#' @description (Deprecated) Extract code from an RPubs article. Use \code{rpubs_code()} instead. These functions still work but will be removed (defunct) in the next version.
+#'
+#'
+#' \itemize{
+#'  \item \code{\link{extractCode}}: This function is deprecated, and will
+#'  be removed in the next version of this package.
+#' }
+#'
+#' @name extractCode-deprecated
 #' @param url Character. URL of RPubs article, e.g. url = "http://rpubs.com/aephidayatuloh/sendgmail".
 #' @param files Character. File name for the extracted code as R script, e.g. \code{code.R}.
 #' @param output Logical. Should extraction include output of the code? Default to \code{FALSE}, means only R script will be extracted.
@@ -16,11 +24,10 @@
 #'
 #' @export
 extractCode <- function(url, files = NULL, output = FALSE){
-  # url <- "http://rpubs.com/aephidayatuloh/sendgmail"
-
-  # if(substr(url, 8, 16) != "rpubs.com"){
-  #   stop("Only support article from http://rpubs.com")
+  # if (as.character(match.call()[[1]]) == "extractCode") {
+  #   warning("please use rpubs_code() instead of extractCode()", call. = FALSE)
   # }
+  .Deprecated(msg = "'extractCode()' will be removed in the next version\nUse 'rpubs_code()' instead")
   pg <- read_html(url)
 
   iframe_link <- paste0("http:",
