@@ -18,11 +18,10 @@
 extractCode <- function(url, files = NULL, output = FALSE){
   # url <- "http://rpubs.com/aephidayatuloh/sendgmail"
 
-  # if(substr(gsub("http://", "", "http://rpubs.com/aephidayatuloh/sendgmail"), 1, 9) != "rpubs.com"){
+  # if(substr(url, 8, 16) != "rpubs.com"){
   #   stop("Only support article from http://rpubs.com")
   # }
   pg <- read_html(url)
-
 
   iframe_link <- paste0("http:",
                         html_attr(
@@ -49,8 +48,8 @@ extractCode <- function(url, files = NULL, output = FALSE){
     )
 
   if(is.null(files)){
-    paste(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n"))
+    paste0(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n"))
   } else {
-    writeLines(text = paste(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n")), con = files)
+    writeLines(text = paste0(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n")), con = files)
   }
 }
