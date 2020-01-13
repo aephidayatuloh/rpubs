@@ -37,9 +37,9 @@ extractCode <- function(url, files = NULL, output = FALSE){
                         )
 
   if(output){
-    node <- "pre.r"
-  } else {
     node <- "pre"
+  } else {
+    node <- "pre.r"
   }
   code <- html_text(
     html_nodes(
@@ -50,6 +50,6 @@ extractCode <- function(url, files = NULL, output = FALSE){
   if(is.null(files)){
     code
   } else {
-    writeLines(code, con = files, sep = "")
+    writeLines(text = paste(gsub("\n", "", code), collapse = "\n\n"), con = files)
   }
 }
