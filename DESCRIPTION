@@ -1,0 +1,17 @@
+Package: rpubs
+Type: Package
+Title: Extract Code-Block From RPubs Article
+Version: 0.1.0
+Author: Aep Hidayatuloh [aut, cre] (<https://orcid.org/0000-0002-4669-3354>)
+Authors@R: 
+      person(given = "Aep", family = "Hidayatuloh", email = "aef.stk@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4669-3354"))
+Maintainer: Aep Hidayatuloh <aef.stk@gmail.com>
+Description: Extract code only or with the output from an RPubs article and write the code-block to R script.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.5.0)
+Imports: rvest (>= 0.3.5), xml2 (>= 1.2.2)
+Suggests: 
+    testthat (>= 2.1.0)
+RoxygenNote: 7.0.2
