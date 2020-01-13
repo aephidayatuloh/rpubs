@@ -41,6 +41,7 @@ extractCode <- function(url, files = NULL, output = FALSE){
   } else {
     node <- "pre.r"
   }
+
   code <- html_text(
     html_nodes(
       read_html(iframe_link),
