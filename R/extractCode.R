@@ -50,6 +50,6 @@ extractCode <- function(url, files = NULL, output = FALSE){
   if(is.null(files)){
     code
   } else {
-    writeLines(code, con = files)
+    writeLines(code, con = files, sep = "")
   }
 }
