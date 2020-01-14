@@ -2,7 +2,7 @@
 #
 #' @title Extract Code From RPubs Article
 #' @description Extract code from an RPubs article.
-#' @param url Character. URL of RPubs article, e.g. url = "http://rpubs.com/aephidayatuloh/sendgmail".
+#' @param url Character. URL of RPubs article, e.g. url = "https://rpubs.com/aephidayatuloh/sendgmail".
 #' @param files Character. File name for the extracted code as R script, e.g. \code{code.R}.
 #' @param output Logical. Should extraction include output of the code? Default to \code{FALSE}, means only R script will be extracted.
 #' @import rvest
@@ -10,14 +10,14 @@
 #' @return vector
 #' @details If \code{files = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
 #' @examples \dontrun{
-#' rpubs_code(url = "http://rpubs.com/aephidayatuloh/sendgmail", file = "sendmail.R", output = FALSE)
+#' rpubs_code(url = "https://rpubs.com/aephidayatuloh/sendgmail", file = "sendmail.R", output = FALSE)
 #' }
 #'
 #'
 #' @export
 rpubs_code <- function(url, files = NULL, output = FALSE){
-  if(substr(url, 8, 16) != "rpubs.com"){
-    stop("Only support article from http://rpubs.com")
+  if(substr(url, 9, 17) != "rpubs.com"){
+    stop("Only support article from https://rpubs.com")
   }
 
   pg <- read_html(url)

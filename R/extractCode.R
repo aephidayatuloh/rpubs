@@ -1,12 +1,12 @@
 # This is function to extract code from RPubs
 #
 #' @title Extract Code From RPubs Article
-#' @description (Deprecated) Extract code from an RPubs article. Use \code{rpubs_code()} instead. These functions still work but will be removed (defunct) in the next version.
+#' @description (Deprecated) Extract code from an RPubs article. These functions still work but will be removed (defunct) in the next version.
 #'
 #'
 #' \itemize{
 #'  \item \code{\link{extractCode}}: This function is deprecated, and will
-#'  be removed in the next version of this package.
+#'  be removed in the next version of this package. Use \code{rpubs_code()} instead.
 #' }
 #'
 #' @name extractCode-deprecated

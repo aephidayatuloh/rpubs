@@ -7,7 +7,7 @@
 rpubs_code(url, files = NULL, output = FALSE)
 }
 \arguments{
-\item{url}{Character. URL of RPubs article, e.g. url = "http://rpubs.com/aephidayatuloh/sendgmail".}
+\item{url}{Character. URL of RPubs article, e.g. url = "https://rpubs.com/aephidayatuloh/sendgmail".}
 
 \item{files}{Character. File name for the extracted code as R script, e.g. \code{code.R}.}
 
@@ -24,7 +24,7 @@ If \code{files = NULL} then the extracted script will be print on console or as 
 }
 \examples{
 \dontrun{
-rpubs_code(url = "http://rpubs.com/aephidayatuloh/sendgmail", file = "sendmail.R", output = FALSE)
+rpubs_code(url = "https://rpubs.com/aephidayatuloh/sendgmail", file = "sendmail.R", output = FALSE)
 }
 
 

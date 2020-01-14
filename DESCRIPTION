@@ -1,7 +1,7 @@
 Package: rpubs
 Type: Package
-Title: Extract Code-Block From RPubs Article
-Version: 0.2.1
+Title: Extract Code Block From Rpubs Article
+Version: 0.2.2
 Author: Aep Hidayatuloh [aut, cre] (<https://orcid.org/0000-0002-4669-3354>)
 Authors@R: 
       person(given = "Aep", family = "Hidayatuloh", email = "aef.stk@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4669-3354"))
