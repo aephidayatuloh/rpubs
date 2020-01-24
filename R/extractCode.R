@@ -17,9 +17,9 @@
 #' @importFrom xml2 read_html
 #' @return vector
 #' @details If \code{files = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
-#' @examples \dontrun{
+#' @examples
 #' extractCode(url = "http://rpubs.com/aephidayatuloh/sendgmail", file = "sendmail.R", output = FALSE)
-#' }
+#'
 #'
 #'
 #' @export

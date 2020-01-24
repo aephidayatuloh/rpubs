@@ -4,12 +4,12 @@
 \alias{rpubs_code}
 \title{Extract Code From RPubs Article}
 \usage{
-rpubs_code(url, files = NULL, output = FALSE)
+rpubs_code(url, path = NULL, output = FALSE)
 }
 \arguments{
 \item{url}{Character. URL of RPubs article, e.g. url = "https://rpubs.com/aephidayatuloh/sendgmail".}
 
-\item{files}{Character. File name for the extracted code as R script, e.g. \code{code.R}.}
+\item{path}{Character. File name for the extracted code as R script, e.g. \code{code.R}.}
 
 \item{output}{Logical. Should extraction include output of the code? Default to \code{FALSE}, means only R script will be extracted.}
 }
@@ -23,9 +23,8 @@ Extract code from an RPubs article.
 If \code{files = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
 }
 \examples{
-\dontrun{
 rpubs_code(url = "https://rpubs.com/aephidayatuloh/sendgmail", file = "sendmail.R", output = FALSE)
-}
+
 
 
 }

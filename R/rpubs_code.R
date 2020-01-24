@@ -3,20 +3,20 @@
 #' @title Extract Code From RPubs Article
 #' @description Extract code from an RPubs article.
 #' @param url Character. URL of RPubs article, e.g. url = "https://rpubs.com/aephidayatuloh/sendgmail".
-#' @param files Character. File name for the extracted code as R script, e.g. \code{code.R}.
+#' @param path Character. File name for the extracted code as R script, e.g. \code{code.R}.
 #' @param output Logical. Should extraction include output of the code? Default to \code{FALSE}, means only R script will be extracted.
 #' @import rvest
 #' @importFrom xml2 read_html
 #' @return vector
 #' @details If \code{files = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
-#' @examples \dontrun{
-#' rpubs_code(url = "https://rpubs.com/aephidayatuloh/sendgmail", file = "sendmail.R", output = FALSE)
-#' }
+#' @examples
+#' rpubs_code(url = "https://rpubs.com/aephidayatuloh/sendgmail", file = "sendgmail.R", output = FALSE)
+#'
 #'
 #'
 #' @export
-rpubs_code <- function(url, files = NULL, output = FALSE){
-  if(substr(url, 9, 17) != "rpubs.com"){
+rpubs_code <- function(url, path = NULL, output = FALSE){
+  if(substr(gsub(" ?(f|ht)(tp)(s?)(://)(.*)[.|/]", "", url), 9, 17) %in% "rpubs.com"){
     stop("Only support article from https://rpubs.com")
   }
 
@@ -46,9 +46,9 @@ rpubs_code <- function(url, files = NULL, output = FALSE){
       node)
   )
 
-  if(is.null(files)){
+  if(is.null(path)){
     paste0(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n"))
   } else {
-    writeLines(text = paste0(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n")), con = files)
+    writeLines(text = paste0(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n")), con = path)
   }
 }
