@@ -16,7 +16,7 @@
 #'
 #' @export
 rpubs_code <- function(url, path = NULL, output = FALSE){
-  if(sub(pattern = "https?://(www\\.)?", replacement = "", x = url) == "rpubs.com"){
+  if(substr(sub(pattern = "https?://(www\\.)?", replacement = "", x = url), 1, 9) == "rpubs.com"){
     stop("Only support article from https://rpubs.com")
   }
 
