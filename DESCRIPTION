@@ -1,12 +1,12 @@
 Package: rpubs
 Type: Package
-Title: Extract Code Block From Rpubs Article
+Title: Extract Code Block from Rpubs Article
 Version: 0.2.2
 Author: Aep Hidayatuloh [aut, cre] (<https://orcid.org/0000-0002-4669-3354>)
 Authors@R: 
       person(given = "Aep", family = "Hidayatuloh", email = "aef.stk@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-4669-3354"))
 Maintainer: Aep Hidayatuloh <aef.stk@gmail.com>
-Description: Extract code only or with the output from an RPubs <https://rpubs.com/> article and write the code-block to R script file.
+Description: Extract code only or with the output from an Rpubs <https://rpubs.com/> article and write the code-block to R script file.
 License: GPL-2
 URL: https://github.com/aephidayatuloh/rpubs
 Encoding: UTF-8

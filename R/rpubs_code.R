@@ -10,7 +10,7 @@
 #' @return vector
 #' @details If \code{files = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
 #' @examples
-#' rpubs_code(url = "https://rpubs.com/aephidayatuloh/sendgmail", file = "sendgmail.R", output = FALSE)
+#' rpubs_code(url = "https://rpubs.com/aephidayatuloh/sendgmail", path = NULL, output = FALSE)
 #'
 #'
 #'
@@ -34,11 +34,7 @@ rpubs_code <- function(url, path = NULL, output = FALSE){
                           "src")
   )
 
-  if(output){
-    node <- "pre"
-  } else {
-    node <- "pre.r"
-  }
+  node <- ifelse(output, "pre", "pre.r")
 
   code <- html_text(
     html_nodes(
@@ -46,9 +42,11 @@ rpubs_code <- function(url, path = NULL, output = FALSE){
       node)
   )
 
+  script <- paste0(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n"))
+
   if(is.null(path)){
-    paste0(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n"))
+    return(script)
   } else {
-    writeLines(text = paste0(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n")), con = path)
+    writeLines(text = script, con = path)
   }
 }

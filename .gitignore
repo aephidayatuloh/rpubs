@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+rpubs.Rcheck/
+rpubs*.tar.gz
+rpubs*.tgz

@@ -3,7 +3,7 @@
 \name{extractCode-deprecated}
 \alias{extractCode-deprecated}
 \alias{extractCode}
-\title{Extract Code From RPubs Article}
+\title{Extract Code From Rpubs Article}
 \usage{
 extractCode(url, files = NULL, output = FALSE)
 }
@@ -18,7 +18,7 @@ extractCode(url, files = NULL, output = FALSE)
 vector
 }
 \description{
-(Deprecated) Extract code from an RPubs article. These functions still work but will be removed (defunct) in the next version.
+(Deprecated) Extract code from an Rpubs <https://rpubs.com/> article. These functions still work but will be removed (defunct) in the next version.
 
 
 \itemize{
@@ -30,7 +30,7 @@ vector
 If \code{files = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
 }
 \examples{
-extractCode(url = "http://rpubs.com/aephidayatuloh/sendgmail", file = "sendmail.R", output = FALSE)
+extractCode(url = "http://rpubs.com/aephidayatuloh/sendgmail", file = NULL, output = FALSE)
 
 
 
