@@ -8,7 +8,7 @@
 #' @import rvest
 #' @importFrom xml2 read_html
 #' @return vector
-#' @details If \code{files = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
+#' @details If \code{path = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
 #' @examples
 #' rpubs_code(url = "https://rpubs.com/aephidayatuloh/sendgmail", path = NULL, output = FALSE)
 #'
@@ -16,13 +16,17 @@
 #'
 #' @export
 rpubs_code <- function(url, path = NULL, output = FALSE){
+  url <- sub("http://", "https://", url)
+  url <- sub("https://www.", "https://", url)
+
   if(substr(sub("https?://(www\\.)?", "", url), 1, 9) != "rpubs.com"){
     stop("Only support article from https://rpubs.com")
   }
 
+  message("Please wait...\nThis depends on your internet connection.\n")
   pg <- read_html(url)
 
-  iframe_link <- paste0("http:",
+  iframe_link <- paste0("https:",
                         html_attr(
                           html_nodes(
                             html_nodes(

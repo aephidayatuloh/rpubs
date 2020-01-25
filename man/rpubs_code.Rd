@@ -20,7 +20,7 @@ vector
 Extract code from an RPubs article.
 }
 \details{
-If \code{files = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
+If \code{path = NULL} then the extracted script will be print on console or as vector if you assign to an object. One code block is one element of vector.
 }
 \examples{
 rpubs_code(url = "https://rpubs.com/aephidayatuloh/sendgmail", path = NULL, output = FALSE)
