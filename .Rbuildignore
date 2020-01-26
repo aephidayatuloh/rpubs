@@ -3,3 +3,4 @@
 ^rpubs\.Rcheck$
 ^rpubs.*\.tar\.gz$
 ^rpubs.*\.tgz$
+^\.travis\.yml$

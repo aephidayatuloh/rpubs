@@ -1,4 +1,5 @@
 # rpubs : Extract code from RPubs article
+[![Travis build status](https://travis-ci.org/aephidayatuloh/rpubs.svg?branch=master)](https://travis-ci.org/aephidayatuloh/rpubs)
 
 [RPubs.com](https://rpubs.com) is a web publishing service for R articles created from R Markdown. When you find some interesting article, may be you want to copy the script to try reproduce on your local machine. The `rpubs` package can help you to automatically copy and paste the script (or with the output) without you have to do it manually.
 
