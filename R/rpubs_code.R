@@ -23,7 +23,7 @@ rpubs_code <- function(url, path = NULL, output = FALSE){
     stop("Only support article from https://rpubs.com")
   }
 
-  message("Please wait...\nThis depends on your internet connection.\n")
+  message("Please wait...\nThis depends on your internet connection speed and 'size' of content.\n")
   pg <- read_html(url)
 
   iframe_link <- paste0("https:",
@@ -46,7 +46,7 @@ rpubs_code <- function(url, path = NULL, output = FALSE){
       node)
   )
 
-  script <- paste0(sprintf("# %s\n\n", url), paste(gsub("\n", "", code), collapse = "\n\n"))
+  script <- paste0(sprintf("# %s\n\n", url), paste(code, collapse = "\n\n"))
 
   if(is.null(path)){
     return(script)
