@@ -2,5 +2,7 @@
 
 export(extractCode)
 export(rpubs_code)
+export(rpubs_ly)
 import(rvest)
+import(shiny)
 importFrom(xml2,read_html)
