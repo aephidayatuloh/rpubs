@@ -1,3 +1,4 @@
+library(shiny)
 ui <- fixedPage(
   fluidRow(
     wellPanel(style="background-color:skyblue;", width = "100%", height = "5%",

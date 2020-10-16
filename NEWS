@@ -1,3 +1,6 @@
 NEWS
+Version 0.3.2 (2020-10-16)
+- Fix bugs about code's linebreaks
+
 Version 0.3.0 (2020-03-27)
 - Added new function rpubs_ly() as a shiny app to view the first 12 articles like you open https://rpubs.com from your browser
